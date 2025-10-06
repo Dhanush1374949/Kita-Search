@@ -4,9 +4,11 @@ const ResultContext = createContext();
 const baseUrl = "https://google-search74.p.rapidapi.com";
 
 export const ResultContextProvider = ({ children }) => {
-  const [result, setResult] = useState([]);
-  const [isLoading, setLoading] = useState(false);
+  
+  
   const [searchTerm, setSearchTerm] = useState(" "); 
+  const [isLoading, setLoading] = useState(false);
+  const [result, setResult] = useState([]);
 
   const getResult = async (query) => {
     if (!query) return;
@@ -40,5 +42,6 @@ export const ResultContextProvider = ({ children }) => {
     </ResultContext.Provider>
   );
 };
+
 
 export const useResultContext = () => useContext(ResultContext);
