@@ -1,12 +1,13 @@
 import React from "react";
 import { useResultContext } from "../context/ResultContextProvider";
+import { Loading } from "./Loading";
 export const Results = () => {
 const { result, isLoading } = useResultContext();
 
  
 
 
-  if (isLoading) return <div className="text-center mt-10">Loading...</div>;
+  if (isLoading) return <div className="text-center mt-10"><Loading/></div>
 
   if (!result || result.length === 0) return <div className="text-center mt-10">No results found.</div>;
 

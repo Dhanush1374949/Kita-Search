@@ -5,17 +5,11 @@ import { Results } from "./Results";
 const Routers = () => {
   return (
     <Routes>
-      {/* Make "/" the default route */}
+    
       <Route
-        path="/"
-        element={
-          <div className="p-6">
-            <Search />
-            <Results />
-          </div>
-        }
+        path="/"  element={<div className="p-6"><Search /><Results /></div>}
       />
-      {/* You can add more routes if needed */}
+   
     </Routes>
   );
 };

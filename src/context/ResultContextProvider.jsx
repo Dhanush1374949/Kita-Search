@@ -6,7 +6,7 @@ const baseUrl = "https://google-search74.p.rapidapi.com";
 export const ResultContextProvider = ({ children }) => {
   const [result, setResult] = useState([]);
   const [isLoading, setLoading] = useState(false);
-  const [searchTerm, setSearchTerm] = useState(" "); // default search
+  const [searchTerm, setSearchTerm] = useState(" "); 
 
   const getResult = async (query) => {
     if (!query) return;
@@ -16,7 +16,7 @@ export const ResultContextProvider = ({ children }) => {
       const response = await fetch(`${baseUrl}?q=${query}&limit=40`, {
         method: "GET",
         headers: {
-          "x-rapidapi-key":'Add_your_apiKey_inside_from_rapidApi',
+          "x-rapidapi-key":"Add_your_apiKey_inside_from_rapidApi",
           "x-rapidapi-host": "google-search74.p.rapidapi.com",
         },
       });
@@ -35,9 +35,7 @@ export const ResultContextProvider = ({ children }) => {
   }, [searchTerm]);
   
   return (
-    <ResultContext.Provider
-      value={{ getResult, result, searchTerm, setSearchTerm, isLoading }}
-    >
+    <ResultContext.Provider value={{ getResult, result, searchTerm, setSearchTerm, isLoading }} >
       {children}
     </ResultContext.Provider>
   );
