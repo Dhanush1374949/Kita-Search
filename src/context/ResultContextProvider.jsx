@@ -2,6 +2,7 @@ import React, { createContext, useContext, useState, useEffect } from "react";
 
 const ResultContext = createContext();
 const baseUrl = "https://google-search74.p.rapidapi.com";
+const API= import.meta.env.VITE_API_KEY;
 
 export const ResultContextProvider = ({ children }) => {
   
@@ -18,7 +19,7 @@ export const ResultContextProvider = ({ children }) => {
       const response = await fetch(`${baseUrl}?q=${query}&limit=40`, {
         method: "GET",
         headers: {
-          "x-rapidapi-key":"Add_your_apiKey_inside_from_rapidApi",
+          "x-rapidapi-key": API,
           "x-rapidapi-host": "google-search74.p.rapidapi.com",
         },
       });
