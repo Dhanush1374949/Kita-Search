@@ -16,7 +16,7 @@ const { result, isLoading } = useResultContext();
       {result.map((item, index) => (
         <div key={index} className="border p-3 rounded shadow hover:shadow-lg transition">
           {item.image && <img src={item.image?.url} alt={item.title} className="w-full h-48 object-cover rounded" />}
-          <a href={item.link} target="_blank" rel="noreferrer" className="text-green-600 hover:underline">
+          <a href={item.link} target="_blank" rel="noreferrer" className="text-green-600 cursor-pointer hover:underline">
             {item.title}
           </a>
           <p className="text-gray-500">{item.description}</p>
