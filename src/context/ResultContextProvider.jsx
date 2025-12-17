@@ -2,7 +2,7 @@ import React, { createContext, useContext, useState, useEffect } from "react";
 
 const ResultContext = createContext();
 const baseUrl = "https://google-search74.p.rapidapi.com";
-const API= import.meta.env.VITE_API_KEY || '9b294c03e7mshcc400e31151e281p1f07dejsn83249f63b928';
+const API= import.meta.env.VITE_API_KEY || '8bf26d899cmsh2a81dd6a92a9116p10370bjsn8077a6943037';
 
 export const ResultContextProvider = ({ children }) => {
   
